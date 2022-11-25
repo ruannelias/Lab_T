@@ -2,10 +2,15 @@
 	background: #3d07ff;
 	color: white;
 }
-
 .caixa {
 	padding: 60px 0;
 	border-bottom: 1px solid #e5e5e5;
+}
+.final {
+	border-color: black;
+	border: 1px;
+	border-style:solid;
+	height: 30px;
 }
 
 footer p a {
