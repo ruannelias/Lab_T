@@ -1,9 +1,18 @@
 // // const corpo = document.querySelector('body')
-// mostrar o valor há pagar
+
 let capturando = "";
 let produto = "";
 let total = "";
 let modalidade = "";
+// impedir o minimo de aluguel
+function minimo () {
+    modalidade = document.getElementById('modalidade').value
+    if (capturando < 10 && modalidade == 'Aluguel') {
+
+        alert("A quantidade minima para alugar é de 10 unidades")
+    }
+}
+// mostrar o valor há pagar
 function capturar () {
     produto = document.getElementById('modelo').value;
     modalidade = document.getElementById('modalidade').value
@@ -48,12 +57,6 @@ function capturar () {
         document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 22) ;
         }
 }
-// impedir o minimo de aluguel
 
-function minimo () {
-    modalidade = document.getElementById('modalidade').value
-    if (capturando < 10 && modalidade == 'Aluguel') {
 
-        alert("A quantidade minima para alugar é de 10 unidades")
-    }
-}
+
