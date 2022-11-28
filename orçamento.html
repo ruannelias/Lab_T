@@ -149,17 +149,13 @@
               <label for="Quantidade">Modelo</label>
               <select class="form-control"  id="modelo" >
                     <option>         </option>
-                    <option>Produto A</option>
-                    <option>Produto B</option>
-                    <option>Produto C</option>
-                    <option>Produto D</option>
+                    <option>computador 01X</option>
+                    <option>computador 02X</option>
+                    <option>computador 03X</option>
+                    <option>computador 04X</option>
               </select>
-            </div>
-            <div class="form-group">
-              <label for="Quantidade">Quantidade</label>
-              <input class="form-control" type="text" onclick="capturar()" value="" id="Quantidade" placeholder="Informe a quantidade">
-            </div>
-              <!-- select -->
+            </div> 
+            <!-- select -->
               <div class="form-group">
                 <label for="modalidade">Modalidade</label>
                 <select class="form-control" id="modalidade">
@@ -168,8 +164,14 @@
                     <option>Aluguel</option>
                 </select>
             </div>
+            <div class="form-group">
+              <label for="Quantidade">Quantidade</label>
+              <input class="form-control" type="number" value="" id="Quantidade" placeholder="Informe a quantidade">
+              <input type="button" value="Total" onclick="capturar()">
+            </div>
+             
             <h6> Total a pagar</h6>
-           <div class="final"><p id="valorDigitado"> </p></div>
+           <div class="final"><p id="valorDigitado">  </p></div>
             <!-- range -->
               <!-- <div>
                   <label id="range">Satisfação</label>
