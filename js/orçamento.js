@@ -56,19 +56,19 @@ function capturar () {
         total = produto * capturando
     
         if (capturando <= 9) {
-        document.getElementById('valorDigitado').innerHTML = 'R$' + total;
+        document.getElementById('valorDigitado').innerHTML = 'R$' + total.toFixed(2);
     }else if (capturando >= 10 && capturando < 20 ) {
-        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 7) ;
+        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 7).toFixed(2) ;
     }else if (capturando >= 20 && capturando < 30 ) {
-        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 10) ;
+        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 10).toFixed(2) ;
     }else if (capturando >= 30 && capturando < 50 ) {
-        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 15) ;
+        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 15).toFixed(2) ;
     }else if (capturando >= 50 && capturando < 100 ) {
-        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 17) ;
+        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 17).toFixed(2) ;
     }else if (capturando >= 100 && capturando < 500 ) {
-        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 19) ;
+        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 19).toFixed(2) ;
     }else if (capturando > 500 ) {
-        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 22) ;
+        document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 22).toFixed(2) ;
         }
 }
 function aviso() {
