@@ -1,4 +1,5 @@
 const input = document.getElementById('soma')
+const impedir = document.getElementById('Quantidade');
 let capturando = "";
 let produto = "";
 let total = "";
@@ -12,6 +13,18 @@ if (modalidade == 'Aluguel' && capturando < 10) {
 }else{
     input.disabled = false;
 }
+}
+//impedir a virgula no formulario de quantidade
+impedir.addEventListener("keypress", function(e) {
+    checkChar(e);
+})
+function checkChar(e) {
+    const char = String.fromCharCode(e.keyCode);
+    console.log(e.keyCode)
+    // console.log(char)
+    if (e.keyCode == 44) {
+        return e.preventDefault();
+    }
 }
 // mostrar o valor há pagar
 function capturar () {
