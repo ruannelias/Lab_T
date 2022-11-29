@@ -166,8 +166,8 @@
             </div>
             <div class="form-group">
               <label for="Quantidade">Quantidade</label>
-              <input class="form-control" type="text" value="" id="Quantidade" placeholder="Informe a quantidade">
-              <input type="button" value="Total" onclick="capturar()">
+              <input class="form-control" type="number"  min=1 oninput="validity.valid||(value='');" onmouseout="minimo()" id="Quantidade" placeholder="Informe a quantidade">
+              <input id="soma" type="button" value="Total" onclick="capturar()">
             </div>
              
             <h6> Total a pagar</h6>
@@ -180,7 +180,7 @@
               </div> -->
       
               <!-- button -->
-              <input type="submit" value="Enviar" onclick="minimo()">
+              <input type="submit" value="Enviar" onclick="aviso()">
       
           </form>
           </div>

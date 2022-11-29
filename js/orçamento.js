@@ -1,16 +1,17 @@
-// // const corpo = document.querySelector('body')
-
+const input = document.getElementById('soma')
 let capturando = "";
 let produto = "";
 let total = "";
 let modalidade = "";
-// impedir o minimo de aluguel
-function minimo () {
-    modalidade = document.getElementById('modalidade').value
-    if (capturando < 10 && modalidade == 'Aluguel') {
-
-        alert("A quantidade minima para alugar é de 10 unidades")
-    }
+//impedir de alugar menos que 10 unidades
+function minimo() {
+modalidade = document.getElementById('modalidade').value;
+capturando = document.getElementById('Quantidade').value;
+if (modalidade == 'Aluguel' && capturando < 10) {
+    input.disabled = true;    
+}else{
+    input.disabled = false;
+}
 }
 // mostrar o valor há pagar
 function capturar () {
@@ -40,8 +41,8 @@ function capturar () {
     }
     capturando = document.getElementById('Quantidade').value;
         total = produto * capturando
-
-    if (capturando <= 9) {
+    
+        if (capturando <= 9) {
         document.getElementById('valorDigitado').innerHTML = 'R$' + total;
     }else if (capturando >= 10 && capturando < 20 ) {
         document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 7) ;
@@ -56,6 +57,13 @@ function capturar () {
     }else if (capturando > 500 ) {
         document.getElementById('valorDigitado').innerHTML = 'R$' + (total - total / 100 * 22) ;
         }
+}
+function aviso() {
+    if (modalidade == 'Aluguel' && capturando < 10) {
+        alert("ATENÇÃO: Quantidade minima de produtos para se alugar: 10 unidades");    
+    } else {
+
+    }
 }
 
 

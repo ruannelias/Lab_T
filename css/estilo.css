@@ -12,6 +12,9 @@
 	border-style:solid;
 	height: 30px;
 }
+.form-control {
+	width: 400px;
+}
 
 footer p a {
 	margin: 5px 15px;
